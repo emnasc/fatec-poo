@@ -16,7 +16,8 @@ public class Exer01 {
 
         do {
             System.out.print("\nInforme o nome do produto: ");
-            String produto = input.nextLine();
+            String produto = input.next();
+            input.nextLine();
 
             System.out.print("Informe o valor original do produto: ");
             float valor = input.nextFloat();
@@ -25,7 +26,7 @@ public class Exer01 {
             System.out.printf("\nCom o desconto de %.0f%% aplicado, o valor atual do produto %s seria %.2f\n",
                     DESCONTO,
                     produto,
-                    (valor + (valor * 0.09)));
+                    (valor - (valor * 0.09)));
 
             System.out.println("\n-----------------------------\n");
 
@@ -34,6 +35,7 @@ public class Exer01 {
             System.out.println("[2] Não");
             System.out.print("Sua resposta: ");
             int resposta = input.nextInt();
+
 
             if(resposta == OPCARO_NAO) {
                 System.out.println("Até a próxima!");
